@@ -12,5 +12,9 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react'],
-  rules: { 'operator-linebreak': 0 },
+  rules: {
+    'operator-linebreak': 0,
+    'jsx-a11y/click-events-have-key-events': 0,
+    'jsx-a11y/no-static-element-interactions': 0,
+  },
 };
