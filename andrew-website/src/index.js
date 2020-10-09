@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './app/store';
 import * as serviceWorker from './serviceWorker';
+import Ui from './ui';
 
 ReactDOM.render(
   // eslint-disable-next-line react/jsx-filename-extension
   <React.StrictMode>
-    <Provider store={store}>Hello</Provider>
+    <Provider store={store}>
+      <Ui />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
