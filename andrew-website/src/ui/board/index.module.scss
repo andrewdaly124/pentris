@@ -1,0 +1,15 @@
+.board {
+  user-select: none;
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+    img {
+      image-rendering: pixelated;
+      width: 40px;
+    }
+  }
+}
