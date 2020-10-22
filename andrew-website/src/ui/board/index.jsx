@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import styles from './index.module.scss';
 import { getBoardHeight, getBoardWidth } from '../../store/selectors';
 
-import { EmptyPng } from '../../static';
+import theme from '../theme';
 
 export default function Board() {
   const boardHeight = useSelector(getBoardHeight);
@@ -11,10 +11,10 @@ export default function Board() {
 
   function renderBoard() {
     const board = [];
-    for (let i = 0; i < boardWidth; i += 1) {
+    for (let i = 0; i < boardHeight; i += 1) {
       const row = [];
-      for (let j = 0; j < boardHeight; j += 1) {
-        row.push(<img src={EmptyPng} alt="" />);
+      for (let j = 0; j < boardWidth; j += 1) {
+        row.push(<img src={theme.empty} alt="" />);
       }
       board.push(<div className={styles.row}>{row}</div>);
     }

@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store';
 import * as serviceWorker from './serviceWorker';
+import initGame from './game';
 import Ui from './ui';
+
+// Start app logic
+initGame();
 
 // Root web component
 ReactDOM.render(
