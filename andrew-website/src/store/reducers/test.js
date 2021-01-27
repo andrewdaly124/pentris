@@ -1,5 +1,5 @@
-import { createReducer } from 'typesafe-actions';
-import { setTestVar } from '../actions';
+import { createReducer } from "typesafe-actions";
+import { setTestVar } from "../actions";
 
 const test = createReducer({
   testVar: 2,

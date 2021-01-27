@@ -1,5 +1,11 @@
+@import "../../constants.scss";
+
 .board {
   user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
   .row {
     display: flex;
@@ -9,7 +15,11 @@
 
     img {
       image-rendering: pixelated;
-      width: 30px; // make dynamic
+      width: $UNIT_SIZE;
     }
+  }
+
+  .piece {
+    position: fixed;
   }
 }

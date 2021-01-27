@@ -1,7 +1,7 @@
-import RetroEmpty from './assets/retro/empty.png';
-import RetroBlueSolid from './assets/retro/blue_solid.png';
-import RetroBlueOpen from './assets/retro/blue_open.png';
-import RetroRedSolid from './assets/retro/red_solid.png';
+import RetroEmpty from "./assets/retro/empty.png";
+import RetroBlueSolid from "./assets/retro/blue_solid.png";
+import RetroBlueOpen from "./assets/retro/blue_open.png";
+import RetroRedSolid from "./assets/retro/red_solid.png";
 
 const theme = {};
 

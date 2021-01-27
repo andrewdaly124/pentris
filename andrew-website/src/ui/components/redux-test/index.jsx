@@ -1,8 +1,8 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import styles from './index.module.scss';
-import { setTestVar } from '../../../store/actions';
-import { getTestVar } from '../../../store/selectors';
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import styles from "./index.module.scss";
+import { setTestVar } from "../../../store/actions";
+import { getTestVar } from "../../../store/selectors";
 
 export default function ReduxTest() {
   const dispatch = useDispatch();

@@ -1,6 +1,6 @@
-import { all, spawn } from 'redux-saga/effects';
+import { all, spawn } from "redux-saga/effects";
 
-import test from './test';
+import test from "./test";
 
 const sagaMap = [test];
 
