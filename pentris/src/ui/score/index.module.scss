@@ -1,0 +1,13 @@
+.score {
+  font-size: 40px;
+  background-color: black;
+  outline: solid cyan;
+  height: 50px;
+  color: white;
+  display: flex;
+  align-items: center;
+
+  label {
+    padding: 0px 20px;
+  }
+}

@@ -1,7 +1,7 @@
 import Move from "../game/logic/move";
 import Rotate from "../game/logic/rotate";
 
-import { setSoftDrop } from "../store/actions";
+import { setSoftDrop, gameOver } from "../store/actions";
 
 import store from "../store";
 
@@ -23,6 +23,9 @@ export function KeyDownHandler(e) {
       break;
     case "z":
       Rotate("ccw");
+      break;
+    case "Enter":
+      store.dispatch(gameOver(false));
       break;
   }
 }

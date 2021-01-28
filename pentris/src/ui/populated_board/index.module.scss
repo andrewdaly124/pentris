@@ -10,4 +10,13 @@
     image-rendering: pixelated;
     width: $UNIT_SIZE;
   }
+
+  .cleared {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 1;
+    height: $UNIT_SIZE;
+  }
 }

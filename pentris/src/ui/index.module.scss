@@ -6,5 +6,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(30, 30, 30);
+  background-image: url("./assets/retro/background-dark.bmp");
+  background-repeat: repeat;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  font-family: "VT323", monospace;
 }

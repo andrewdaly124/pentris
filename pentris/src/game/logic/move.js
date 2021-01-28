@@ -40,5 +40,9 @@ export default function Move(direction) {
     case "down":
       TryMoving(0, 1);
       break;
+    case "up":
+      // only used at the beginning of the level
+      TryMoving(0, -1);
+      break;
   }
 }

@@ -14,3 +14,15 @@ export const resetCurrentLocation = createAction("RESET_CURRENT_LOCATION")();
 
 /** @type { ActionCreator<'SET_CURRENT_FALL_DELTA'> } */
 export const setCurrentFallDelta = createAction("SET_CURRENT_FALL_DELTA")();
+
+/** @type { ActionCreator<'SET_CLEARED_ROWS'> } */
+export const setClearedRows = createAction("SET_CLEARED_ROS")();
+
+/** @type { ActionCreator<'SET_SCORE'> } */
+export const setScore = createAction("SET_SCORE")();
+
+/** @type { ActionCreator<'GAME_OVER'> } */
+export const gameOver = createAction("GAME_OVER")();
+
+/** @type { ActionCreator<'CLEAR_GAME'> } */
+export const clearGame = createAction("CLEAR_GAME")();

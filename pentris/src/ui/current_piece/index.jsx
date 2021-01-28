@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import styles from "./index.module.scss";
 import {
@@ -14,11 +14,10 @@ export default function CurrentPiece() {
   const currentPiece = useSelector(getCurrentPiece);
   const currentLocation = useSelector(getCurrentLocation);
   const boardRect = useSelector(getBoardRect);
-  const [piece, setPiece] = useState(null);
 
-  useLayoutEffect(() => {
-    setPiece(
-      currentPiece.pieces.map((unitCoords) => {
+  return (
+    <div className={styles.piece}>
+      {currentPiece?.pieces?.map((unitCoords) => {
         return (
           <img
             className={styles.unit}
@@ -35,9 +34,7 @@ export default function CurrentPiece() {
             }}
           />
         );
-      })
-    );
-  }, [currentLocation, currentPiece, boardRect]);
-
-  return <div className={styles.piece}>{piece}</div>;
+      })}
+    </div>
+  );
 }
