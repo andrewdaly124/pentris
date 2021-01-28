@@ -7,9 +7,11 @@ import {
   getBoardRect,
 } from "../../store/selectors";
 import { UNIT_SIZE } from "../../constants";
-
 import { COLORS } from "../theme";
 
+/**
+ * Draws the playe controlled current piece
+ */
 export default function CurrentPiece() {
   const currentPiece = useSelector(getCurrentPiece);
   const currentLocation = useSelector(getCurrentLocation);
@@ -18,6 +20,7 @@ export default function CurrentPiece() {
   return (
     <div className={styles.piece}>
       {currentPiece?.pieces?.map((unitCoords) => {
+        // Maps new piece one block at a time
         return (
           <img
             className={styles.unit}

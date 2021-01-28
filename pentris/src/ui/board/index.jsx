@@ -9,9 +9,12 @@ import {
 } from "../../store/selectors";
 import CurrentPiece from "../current_piece";
 import PopulatedBoard from "../populated_board";
-
 import theme from "../theme";
 
+/**
+ * Wraps currentpiece and populatedboard,
+ * and draws the backplate of background blocks
+ */
 export default function Board() {
   const dispatch = useDispatch();
   const boardHeight = useSelector(getBoardHeight);

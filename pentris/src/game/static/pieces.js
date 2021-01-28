@@ -1,3 +1,4 @@
+/** ARRAY OF PIECES */
 const PIECES = [
   {
     name: "F",

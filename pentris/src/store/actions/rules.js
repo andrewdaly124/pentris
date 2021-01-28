@@ -1,5 +1,10 @@
 import { createAction } from "typesafe-actions";
 
+/**
+ *  TODO:
+ *  - Add payload types
+ */
+
 /** @type { ActionCreator<'SET_BOARD_LOCATION'> } */
 export const setBoardRect = createAction("SET_BOARD_LOCATION")();
 

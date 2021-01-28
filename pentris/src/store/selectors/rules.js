@@ -1,3 +1,8 @@
+/**
+ * TODO:
+ * type returns and state
+ */
+
 export const getBoardWidth = (state) => state.rules.board.width;
 export const getBoardHeight = (state) => state.rules.board.height;
 export const getBoardRect = (state) => {

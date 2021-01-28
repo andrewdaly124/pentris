@@ -5,6 +5,9 @@ import { getBoardWidth, getScore } from "../../store/selectors";
 
 import { UNIT_SIZE } from "../../constants";
 
+/**
+ * Score counter at the bottom of the screen
+ */
 export default function Score() {
   const rowLength = useSelector(getBoardWidth);
   const score = useSelector(getScore);

@@ -3,6 +3,10 @@ import createSagaMiddleware from "redux-saga";
 import rootSaga from "./sagas";
 import rootReducer from "./reducers";
 
+/**
+ * Store config
+ */
+
 export const sagaMiddleware = createSagaMiddleware();
 const composeEnhancers =
   (typeof window !== "undefined" &&

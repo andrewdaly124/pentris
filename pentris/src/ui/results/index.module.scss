@@ -1,3 +1,5 @@
+@import "../../constants.scss";
+
 .results {
   z-index: 1;
   position: fixed;
@@ -14,7 +16,7 @@
   flex-direction: column;
   font-size: 80px;
   color: red;
-  transition: opacity 1s ease-in-out;
+  transition: opacity $RESULTS_TRANSITION ease-in-out;
 
   .scoreDisplay {
     display: flex;

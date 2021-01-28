@@ -1,5 +1,10 @@
 import { createAction } from "typesafe-actions";
 
+/**
+ *  TODO:
+ *  - Add payload types
+ */
+
 /** @type { ActionCreator<'SET_CURRENT_PIECE'> } */
 export const setCurrentPiece = createAction("SET_CURRENT_PIECE")();
 

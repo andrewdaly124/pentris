@@ -5,7 +5,7 @@ import RetroRedSolid from "./assets/retro/red_solid.png";
 
 /**
  * TODO:
- * Add new themes
+ * Add new themes, make this smarter
  */
 
 const theme = {};

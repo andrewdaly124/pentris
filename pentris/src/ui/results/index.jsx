@@ -3,6 +3,9 @@ import { useSelector } from "react-redux";
 import styles from "./index.module.scss";
 import { getScore, getGameOver } from "../../store/selectors";
 
+/**
+ * Score display at endgame
+ */
 export default function Score() {
   const score = useSelector(getScore);
   const gameOver = useSelector(getGameOver);

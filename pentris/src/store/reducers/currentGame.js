@@ -21,7 +21,7 @@ const DEFAULT_STATE = {
   over: false,
 };
 
-const test = createReducer(DEFAULT_STATE)
+const currentGame = createReducer(DEFAULT_STATE)
   .handleAction(setCurrentPiece, (state, { payload }) => {
     return { ...state, currentPiece: payload };
   })
@@ -50,4 +50,4 @@ const test = createReducer(DEFAULT_STATE)
     return { ...state, ...DEFAULT_STATE };
   });
 
-export default test;
+export default currentGame;

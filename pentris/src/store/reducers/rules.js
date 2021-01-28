@@ -21,6 +21,7 @@ const rules = createReducer({
     };
   })
   .handleAction(createBoardMap, (state, { payload }) => {
+    // Get width and height, populate an empty board
     const [width, height] = payload;
     const newBoardMap = [];
     for (let i = 0; i < width; i += 1) {
