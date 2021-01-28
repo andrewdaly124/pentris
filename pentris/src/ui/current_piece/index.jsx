@@ -8,7 +8,7 @@ import {
 } from "../../store/selectors";
 import { UNIT_SIZE } from "../../constants";
 
-import theme from "../theme";
+import { COLORS } from "../theme";
 
 export default function CurrentPiece() {
   const currentPiece = useSelector(getCurrentPiece);
@@ -22,7 +22,7 @@ export default function CurrentPiece() {
         return (
           <img
             className={styles.unit}
-            src={theme.blueSolid}
+            src={COLORS[currentPiece.color % COLORS.length]}
             alt=""
             key={`piece-${unitCoords[0]}-${unitCoords[1]}`}
             style={{

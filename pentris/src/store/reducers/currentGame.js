@@ -10,7 +10,7 @@ import {
 const test = createReducer({
   currentPiece: {},
   currentLocation: [7, 2], // At top, halfway to end
-  fallDelta: 800,
+  fallDelta: 200,
   softDrop: false,
 })
   .handleAction(setCurrentPiece, (state, { payload }) => {

@@ -26,5 +26,7 @@ module.exports = {
     "no-loop-func": 0,
     "func-names": 0,
     "no-plusplus": 0,
+    "react/no-array-index-key": 0,
+    "default-case": 0,
   },
 };

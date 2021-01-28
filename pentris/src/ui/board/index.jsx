@@ -7,7 +7,8 @@ import {
   getBoardWidth,
   getBoardMap,
 } from "../../store/selectors";
-import CurrentPiece from "../currentPiece";
+import CurrentPiece from "../current_piece";
+import PopulatedBoard from "../populated_board";
 
 import theme from "../theme";
 
@@ -61,6 +62,7 @@ export default function Board() {
   return (
     <div className={styles.board}>
       <div ref={boardRef}>{board}</div>
+      <PopulatedBoard />
       <CurrentPiece />
     </div>
   );

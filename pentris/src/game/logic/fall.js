@@ -7,8 +7,8 @@ import {
 } from "../../store/selectors";
 import store from "../../store";
 
-import GetNewPosition from "./new_position";
-import Intersects from "./intersect";
+import { GetNewPosition } from "./move";
+import Intersects from "./intersects";
 
 export default async function Fall() {
   const boardHeight = getBoardHeight(store.getState());

@@ -6,11 +6,20 @@ import store from "../store";
 import Place from "./logic/place";
 
 async function initGame() {
+  let randomIndex = Math.floor(Math.random() * PIECES.length);
+  let nextPiece = PIECES[randomIndex];
   while (true /* fixme */) {
+    const currentPiece = nextPiece;
     // Find next piece
-    const randomIndex = Math.floor(Math.random() * PIECES.length);
-    const currentPiece = PIECES[randomIndex];
-    store.dispatch(setCurrentPiece(currentPiece));
+    let nextIndex = Math.floor(Math.random() * PIECES.length);
+    while (nextIndex === randomIndex) {
+      nextIndex = Math.floor(Math.random() * PIECES.length);
+    }
+    randomIndex = nextIndex;
+    nextPiece = PIECES[nextIndex];
+    store.dispatch(
+      setCurrentPiece({ pieces: currentPiece.pieces, color: randomIndex % 3 })
+    );
 
     /**
      *

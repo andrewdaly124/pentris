@@ -3,7 +3,6 @@ import store from "../../store";
 
 export default function Intersects(newPosition) {
   const boardMap = getBoardMap(store.getState());
-  console.log("Intersects?", boardMap);
   for (let i = 0; i < newPosition.length; i++) {
     const block = newPosition[i];
     if (
