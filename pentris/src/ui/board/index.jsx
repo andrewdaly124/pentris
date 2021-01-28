@@ -1,8 +1,12 @@
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import styles from "./index.module.scss";
-import { setBoardRect } from "../../store/actions";
-import { getBoardHeight, getBoardWidth } from "../../store/selectors";
+import { createBoardMap, setBoardRect } from "../../store/actions";
+import {
+  getBoardHeight,
+  getBoardWidth,
+  getBoardMap,
+} from "../../store/selectors";
 import CurrentPiece from "../currentPiece";
 
 import theme from "../theme";
@@ -11,10 +15,16 @@ export default function Board() {
   const dispatch = useDispatch();
   const boardHeight = useSelector(getBoardHeight);
   const boardWidth = useSelector(getBoardWidth);
+  const boardMap = useSelector(getBoardMap);
   const [board, setBoard] = useState(null);
   const boardRef = useRef(null);
 
   useLayoutEffect(() => {
+    if (boardMap.length !== boardWidth || boardMap[0]?.length !== boardWidth) {
+      // create empty board map
+      dispatch(createBoardMap([boardWidth, boardHeight]));
+    }
+
     console.debug("Rendering board background");
     // Board is tiled with single blocks
     const newBoard = [];
@@ -34,16 +44,17 @@ export default function Board() {
       );
     }
     setBoard(newBoard);
-  }, [boardHeight, boardWidth]);
+    // Do not need boardMap as a dependency
+    // eslint-disable-next-line
+  }, [boardHeight, boardWidth, dispatch]);
 
   useLayoutEffect(() => {
     if (boardRef.current) {
       // Push board location to state on render
       const boardRect = boardRef.current.getBoundingClientRect();
-      console.log(boardRect);
       dispatch(setBoardRect({ top: boardRect.top, left: boardRect.left }));
     }
-    // Only board
+    // Only board needed as dependency
     // eslint-disable-next-line
   }, [board]);
 

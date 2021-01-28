@@ -1,9 +1,9 @@
 import PIECES from "./static/pieces";
-import Delay from "./utils/delay";
+import Fall from "./logic/fall";
 
-import { setCurrentPiece } from "../store/actions";
-import { getCurrentFallDelta } from "../store/selectors";
+import { setCurrentPiece, resetCurrentLocation } from "../store/actions";
 import store from "../store";
+import Place from "./logic/place";
 
 async function initGame() {
   while (true /* fixme */) {
@@ -11,8 +11,6 @@ async function initGame() {
     const randomIndex = Math.floor(Math.random() * PIECES.length);
     const currentPiece = PIECES[randomIndex];
     store.dispatch(setCurrentPiece(currentPiece));
-
-    const fallDelta = getCurrentFallDelta(store.getState());
 
     /**
      *
@@ -23,8 +21,9 @@ async function initGame() {
      * 3. in a while loop, decrement location until it hits something, then place
      */
 
-    await Delay(fallDelta);
-    // console.log(currentPiece.name);
+    await Fall();
+    Place();
+    store.dispatch(resetCurrentLocation());
   }
 }
 

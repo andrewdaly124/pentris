@@ -3,7 +3,7 @@ import { setBoardRect } from "../actions";
 
 function logSetVarInstance({ payload }) {
   // eslint-disable-next-line no-console
-  console.log("saga", payload);
+  // console.log("saga", payload);
 }
 
 export default function* test() {
