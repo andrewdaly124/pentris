@@ -1,3 +1,3 @@
-# andrew-website
+# PENTRIS
 
-This is my new personal website
+This is a Tetris-style brick placing game

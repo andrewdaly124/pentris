@@ -1,1 +1,0 @@
-# Services and react defaults
