@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/pentris/static/css/main.5f11f22a.css",
-    "main.js": "/pentris/static/js/main.241ab8c8.js",
+    "main.css": "/pentris/static/css/main.fbe20659.css",
+    "main.js": "/pentris/static/js/main.337a2ee6.js",
     "static/media/background-dark.bmp": "/pentris/static/media/background-dark.0983681c1c82ba6b05cf.bmp",
     "index.html": "/pentris/index.html",
-    "main.5f11f22a.css.map": "/pentris/static/css/main.5f11f22a.css.map",
-    "main.241ab8c8.js.map": "/pentris/static/js/main.241ab8c8.js.map"
+    "main.fbe20659.css.map": "/pentris/static/css/main.fbe20659.css.map",
+    "main.337a2ee6.js.map": "/pentris/static/js/main.337a2ee6.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f11f22a.css",
-    "static/js/main.241ab8c8.js"
+    "static/css/main.fbe20659.css",
+    "static/js/main.337a2ee6.js"
   ]
 }
