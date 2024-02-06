@@ -1,6 +1,8 @@
 @import "../../constants.scss";
 
 .board {
+  position: fixed;
+  top: 50px;
   user-select: none;
   display: flex;
   align-items: center;

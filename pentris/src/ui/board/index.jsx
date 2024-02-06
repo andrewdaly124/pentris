@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useCallback, useLayoutEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import styles from "./index.module.scss";
 import { createBoardMap, setBoardRect } from "../../store/actions";
@@ -20,7 +20,6 @@ export default function Board() {
   const boardHeight = useSelector(getBoardHeight);
   const boardWidth = useSelector(getBoardWidth);
   const boardMap = useSelector(getBoardMap);
-  const boardRef = useRef(null);
 
   useLayoutEffect(() => {
     if (boardMap.length !== boardWidth || boardMap[0]?.length !== boardWidth) {
@@ -31,19 +30,14 @@ export default function Board() {
     // eslint-disable-next-line
   }, [boardHeight, boardWidth]);
 
-  useLayoutEffect(() => {
-    if (boardRef.current) {
-      // Push board location to state on render
-      const boardRect = boardRef.current.getBoundingClientRect();
-      dispatch(setBoardRect({ top: boardRect.top, left: boardRect.left }));
-    }
-    // No necessary dependencies, only run once
-    // eslint-disable-next-line
+  const setBoardDims = useCallback((node) => {
+    const boardRect = node.getBoundingClientRect();
+    dispatch(setBoardRect({ top: boardRect.top, left: boardRect.left }));
   }, []);
 
   return (
     <div className={styles.board}>
-      <div className={styles.back} ref={boardRef}>
+      <div className={styles.back} ref={setBoardDims}>
         {(() => {
           const newBoard = [];
           // Populate column of rows
